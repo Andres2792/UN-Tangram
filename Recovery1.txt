@@ -1,0 +1,404 @@
+int rotar1 = 0;
+int X1 = 0;
+int Y1 = 0;
+int X2 = 0;
+int Y2 = 0;
+int X3 = 0;
+int Y3 = 0;
+int X4 = 0;
+int Y4 = 0;
+int X5 = 0;
+int Y5 = 0;
+int X6 = 0;
+int Y6 = 0;
+int X7 = 0;
+int Y7 = 0;
+
+int seleccion;
+void setup() {
+  size(500,500);
+  background(0);
+    figuras();
+}
+
+void draw(){
+
+}
+
+void mousePressed(){
+
+  if(mouseButton == RIGHT) {
+    if( color(204,0,153) == get(mouseX,mouseY)){
+      pushMatrix();
+      translate(X1,Y1); //centro de la rotacion
+        if(rotar1 < 11){
+         rotar1++;
+        } else {
+         rotar1 = 0;
+        }
+      rotate(30*radians(rotar1));
+      fill(204,0,153);
+      triangle(0, 0, 400, 0, 200,200); 
+      popMatrix();     
+    }
+  }
+  
+  
+  
+}
+
+void mouseReleased(){
+}
+
+void mouseDragged(){
+  if(mouseButton == LEFT){
+  if(color(204,0,153) == get(mouseX,mouseY)){
+    background(0);
+    pushMatrix();
+    translate(mouseX,mouseY);
+    fill(204,0,153);
+    triangle(0, 0, 400, 0, 200,200);  
+    X1=mouseX;
+    Y1=mouseY;
+    popMatrix();
+    
+    pushMatrix();
+    translate(X2,Y2);
+    fill(51,102,255);
+    triangle(0, 0, 0, 400, 200, 200); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X3,Y3);
+    fill(255,0,102);
+    quad(100, 300, 200, 400, 300, 300, 200, 200);  
+    popMatrix();
+    
+    pushMatrix();
+    translate(X4,Y4);
+    fill(255,102,0);
+    triangle(0, 400, 200, 400, 100, 300);
+    popMatrix();
+    
+    pushMatrix();
+    translate(X5,Y5);
+    fill(51,204,51);
+    triangle(400, 400, 400, 200, 200, 400);
+    popMatrix();
+    
+    pushMatrix();
+    translate(X6,Y6);
+    fill(153,0,255);
+    triangle(200, 200, 300, 300, 300, 100); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X7,Y7);
+    fill(255,255,0);
+    quad(400, 0, 400, 200, 300, 300, 300, 100); 
+    popMatrix();
+    
+  } else if(color(51,102,255) == get(mouseX,mouseY)){
+    background(0);
+    pushMatrix();
+    translate(X1,Y1);
+    fill(204,0,153);
+    triangle(0, 0, 400, 0, 200,200);  
+    popMatrix();
+    
+    pushMatrix();
+    translate(mouseX,mouseY);
+    fill(51,102,255);
+    triangle(0, 0, 0, 400, 200, 200); 
+    X2=mouseX;
+    Y2=mouseY;
+    popMatrix();
+    
+    pushMatrix();
+    translate(X3,Y3);
+    fill(255,0,102);
+    quad(100, 300, 200, 400, 300, 300, 200, 200);  
+    popMatrix();
+    
+    pushMatrix();
+    translate(X4,Y4);
+    fill(255,102,0);
+    triangle(0, 400, 200, 400, 100, 300);
+    popMatrix();
+    
+    pushMatrix();
+    translate(X5,Y5);
+    fill(51,204,51);
+    triangle(400, 400, 400, 200, 200, 400);
+    popMatrix();
+    
+    pushMatrix();
+    translate(X6,Y6);
+    fill(153,0,255);
+    triangle(200, 200, 300, 300, 300, 100); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X7,Y7);
+    fill(255,255,0);
+    quad(400, 0, 400, 200, 300, 300, 300, 100); 
+    popMatrix();
+  } else if(color(255,0,102) == get(mouseX,mouseY)){
+    background(0);
+    pushMatrix();
+    translate(X1,Y1);
+    fill(204,0,153);
+    triangle(0, 0, 400, 0, 200,200);  
+    popMatrix();
+    
+    pushMatrix();
+    translate(X2,Y2);
+    fill(51,102,255);
+    triangle(0, 0, 0, 400, 200, 200); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(mouseX,mouseY);
+    fill(255,0,102);
+    quad(100, 300, 200, 400, 300, 300, 200, 200); 
+    X3=mouseX;
+    Y3=mouseY;
+    popMatrix();
+    
+    pushMatrix();
+    translate(X4,Y4);
+    fill(255,102,0);
+    triangle(0, 400, 200, 400, 100, 300);
+    popMatrix();
+    
+    pushMatrix();
+    translate(X5,Y5);
+    fill(51,204,51);
+    triangle(400, 400, 400, 200, 200, 400);
+    popMatrix();
+    
+    pushMatrix();
+    translate(X6,Y6);
+    fill(153,0,255);
+    triangle(200, 200, 300, 300, 300, 100); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X7,Y7);
+    fill(255,255,0);
+    quad(400, 0, 400, 200, 300, 300, 300, 100); 
+    popMatrix();
+  } else if(color(255,102,0) == get(mouseX,mouseY)){
+    background(0);
+    pushMatrix();
+    translate(X1,Y1);
+    fill(204,0,153);
+    triangle(0, 0, 400, 0, 200,200);  
+    popMatrix();
+    
+    pushMatrix();
+    translate(X2,Y2);
+    fill(51,102,255);
+    triangle(0, 0, 0, 400, 200, 200); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X3,Y3);
+    fill(255,0,102);
+    quad(100, 300, 200, 400, 300, 300, 200, 200); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(mouseX,mouseY);
+    fill(255,102,0);
+    triangle(0, 400, 200, 400, 100, 300);
+    X4=mouseX;
+    Y4=mouseY;
+    popMatrix();
+    
+    pushMatrix();
+    translate(X5,Y5);
+    fill(51,204,51);
+    triangle(400, 400, 400, 200, 200, 400);
+    popMatrix();
+    
+    pushMatrix();
+    translate(X6,Y6);
+    fill(153,0,255);
+    triangle(200, 200, 300, 300, 300, 100); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X7,Y7);
+    fill(255,255,0);
+    quad(400, 0, 400, 200, 300, 300, 300, 100); 
+    popMatrix();
+  } else if(color(51,204,51) == get(mouseX,mouseY)){
+    background(0);
+    pushMatrix();
+    translate(X1,Y1);
+    fill(204,0,153);
+    triangle(0, 0, 400, 0, 200,200);  
+    popMatrix();
+    
+    pushMatrix();
+    translate(X2,Y2);
+    fill(51,102,255);
+    triangle(0, 0, 0, 400, 200, 200); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X3,Y3);
+    fill(255,0,102);
+    quad(100, 300, 200, 400, 300, 300, 200, 200); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X4,Y4);
+    fill(255,102,0);
+    triangle(0, 400, 200, 400, 100, 300);
+    popMatrix();
+    
+    pushMatrix();
+    translate(mouseX,mouseY);
+    fill(51,204,51);
+    triangle(400, 400, 400, 200, 200, 400);
+    X5=mouseX;
+    Y5=mouseY;
+    popMatrix();
+    
+    pushMatrix();
+    translate(X6,Y6);
+    fill(153,0,255);
+    triangle(200, 200, 300, 300, 300, 100); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X7,Y7);
+    fill(255,255,0);
+    quad(400, 0, 400, 200, 300, 300, 300, 100); 
+    popMatrix();
+  } else if(color(153,0,255) == get(mouseX,mouseY)){
+    background(0);
+    pushMatrix();
+    translate(X1,Y1);
+    fill(204,0,153);
+    triangle(0, 0, 400, 0, 200,200);  
+    popMatrix();
+    
+    pushMatrix();
+    translate(X2,Y2);
+    fill(51,102,255);
+    triangle(0, 0, 0, 400, 200, 200); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X3,Y3);
+    fill(255,0,102);
+    quad(100, 300, 200, 400, 300, 300, 200, 200); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X4,Y4);
+    fill(255,102,0);
+    triangle(0, 400, 200, 400, 100, 300);
+    popMatrix();
+    
+    pushMatrix();
+    translate(X5,Y5);
+    fill(51,204,51);
+    triangle(400, 400, 400, 200, 200, 400);
+    popMatrix();
+    
+    pushMatrix();
+    translate(mouseX,mouseY);
+    fill(153,0,255);
+    triangle(200, 200, 300, 300, 300, 100); 
+    X6=mouseX;
+    Y6=mouseY;
+    popMatrix();
+    
+    pushMatrix();
+    translate(X7,Y7);
+    fill(255,255,0);
+    quad(400, 0, 400, 200, 300, 300, 300, 100); 
+    popMatrix();
+  } else if(color(255,255,0) == get(mouseX,mouseY)){
+    background(0);
+    pushMatrix();
+    translate(X1,Y1);
+    fill(204,0,153);
+    triangle(0, 0, 400, 0, 200,200);  
+    popMatrix();
+    
+    pushMatrix();
+    translate(X2,Y2);
+    fill(51,102,255);
+    triangle(0, 0, 0, 400, 200, 200); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X3,Y3);
+    fill(255,0,102);
+    quad(100, 300, 200, 400, 300, 300, 200, 200); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(X4,Y4);
+    fill(255,102,0);
+    triangle(0, 400, 200, 400, 100, 300);
+    popMatrix();
+    
+    pushMatrix();
+    translate(X5,Y5);
+    fill(51,204,51);
+    triangle(400, 400, 400, 200, 200, 400);
+    popMatrix();
+    
+    pushMatrix();
+    translate(X6,Y6);
+    fill(153,0,255);
+    triangle(200, 200, 300, 300, 300, 100); 
+    popMatrix();
+    
+    pushMatrix();
+    translate(mouseX,mouseY);
+    fill(255,255,0);
+    quad(400, 0, 400, 200, 300, 300, 300, 100); 
+    X7=mouseX;
+    Y7=mouseY;
+    popMatrix();
+  }
+  }
+}
+
+
+void figuras(){
+    //figura 1
+    fill(204,0,153);
+    triangle(0, 0, 400, 0, 200,200);  
+
+    //figura 2
+    fill(51,102,255);
+    triangle(0, 0, 0, 400, 200, 200);    
+
+    //figura 3
+    fill(255,0,102);
+    quad(100, 300, 200, 400, 300, 300, 200, 200);
+   
+    //figura 4
+    fill(255,102,0);
+    triangle(0, 400, 200, 400, 100, 300);
+    
+    //figura 5
+    fill(51,204,51);
+    triangle(400, 400, 400, 200, 200, 400);
+    
+    //figura 6
+    fill(153,0,255);
+    triangle(200, 200, 300, 300, 300, 100);
+    
+    //figura 7
+    fill(255,255,0);
+    quad(400, 0, 400, 200, 300, 300, 300, 100);
+}

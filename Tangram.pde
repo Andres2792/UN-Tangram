@@ -570,20 +570,9 @@ void level(){
     case 2:
     fill(255);
     beginShape();
-    vertex(0,200);
-    vertex(200,0);
-    vertex(200,100);
-    vertex(250,150);
-    vertex(300,100);
-    vertex(300,0);
-    vertex(400,0);
-    vertex(350,50);
-    vertex(350,150);
-    vertex(300,200);
-    vertex(200,200);
-    vertex(250,250);
-    vertex(150,250);
-    vertex(200,200);
+    vertex(100,550);
+    vertex(500,150);
+    vertex(900,550);
     endShape(CLOSE);
     break;
     
